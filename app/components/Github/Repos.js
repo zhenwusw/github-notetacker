@@ -1,11 +1,6 @@
 import React from 'react'
 
-export default React.createClass({
-  propTypes: {
-    username: React.PropTypes.string.isRequired,
-    repos: React.PropTypes.array.isRequired
-  },
-
+class Repos extends React.Component {
   render() {
     const repos = this.props.repos.map((repo, index) => {
       return (
@@ -25,4 +20,11 @@ export default React.createClass({
       </div>
     )
   }
-})
+}
+
+Repos.propTypes = {
+  username: React.PropTypes.string.isRequired,
+  repos: React.PropTypes.array.isRequired
+}
+
+export default Repos

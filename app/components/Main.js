@@ -1,7 +1,7 @@
 import React from 'react'
 import SearchGithub from './SearchGithub'
 
-export default React.createClass({
+class Main extends React.Component {
   render() {
     return (
       <div className="main-container">
@@ -17,4 +17,6 @@ export default React.createClass({
       </div>
     )
   }
-})
+}
+
+export default Main

@@ -6,14 +6,11 @@ import Notes from './Notes/Notes'
 
 import helpers from '../utils/helpers'
 
-export default React.createClass({
-  getInitialState() {
-    return {
-      notes: [],
-      bio: {},
-      repos: []
-    }
-  },
+class Profile extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {notes: [], bio: {}, repos: []}
+  }
 
   init() {
     const username = this.props.params.username;
@@ -24,15 +21,15 @@ export default React.createClass({
           repos: data.repos
         })
       })
-  },
+  }
 
-  componentWillMount() {
+  componentDidMount() {
     this.init()
-  },
+  }
 
   componentWillReceiveProps() {
     this.init()
-  },
+  }
 
   render() {
     const username = this.props.params.username
@@ -50,4 +47,6 @@ export default React.createClass({
       </div>
     )
   }
-})
+}
+
+export default Profile

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default React.createClass({
+class UserProfile extends React.Component {
   render() {
     const bio = this.props.bio
     return (
@@ -17,4 +17,6 @@ export default React.createClass({
       </div>
     )
   }
-})
+}
+
+export default UserProfile
